@@ -1,17 +1,17 @@
-// Add your Firebase web app credentials in a .env file to activate the backend.
+// Firebase web app credentials are stored in a local .env file.
 // Firestore collections: rooms, users. Auth: Email/Password and Google provider.
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyANDXBu_wHtvWrDiRARqi92lGecnkP1_ZQ",
-  authDomain: "roomz-80b39.firebaseapp.com",
-  projectId: "roomz-80b39",
-  storageBucket: "roomz-80b39.firebasestorage.app",
-  messagingSenderId: "885243224655",
-  appId: "1:885243224655:web:29443e12686d3f5dd3003a",
-  measurementId: "G-BTC980TQJV"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
